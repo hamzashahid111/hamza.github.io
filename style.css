@@ -44,7 +44,7 @@ section{
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 section .title{
@@ -366,21 +366,37 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 85%;
 }
 .skills-content .right .js::before{
     width: 80%;
 }
 .skills-content .right .php::before{
-    width: 50%;
+    width: 70%;
 }
+.skills-content .right .bs::before{
+  width: 60%;
+}
+
+.skills-content .right .ts::before{
+  width: 80%;
+}
+
+.skills-content .right .io::before{
+  width: 90%;
+}
+
+.skills-content .right .xc::before{
+  width: 60%;
+}
+
 .skills-content .right .mysql::before{
     width: 70%;
 }
 
 /* teams section styling */
 .teams .title::after{
-    content: "who with me";
+    content: "What i explore";
 }
 .teams .carousel .card{
     background: #222;
@@ -396,7 +412,7 @@ section .title::after{
 .teams .carousel .card .box{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     transition: all 0.3s ease;
 }
@@ -410,10 +426,10 @@ section .title::after{
 }
 .teams .carousel .card img{
     height: 150px;
-    width: 150px;
+    width: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
+    /* border-radius: 50%; */
+    /* border: 5px solid crimson; */
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
@@ -677,4 +693,11 @@ footer span a:hover{
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+.skills-content .column .hidden{
+    display: none;
+}
+.skills-content .column #toggle-btn{
+    cursor: pointer;
 }
